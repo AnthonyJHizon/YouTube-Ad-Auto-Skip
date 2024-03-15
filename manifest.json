@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "Youtube Ad Auto Skip",
+	"description": "Auto clicks the skip button for youtube ads on desktop.",
+	"version": "1.0",
+	"action": {
+		"default_popup": "popup/popup.html",
+		"default_icon": "icons/16x16.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://www.youtube.com/*"],
+			"js": ["scripts/ad_skip.js"]
+		}
+	],
+
+	"icons": {
+		"32": "icons/32x32.png",
+		"64": "icons/64x64.png",
+		"96": "icons/96x96.png"
+	}
+}
