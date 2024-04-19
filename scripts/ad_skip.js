@@ -1,16 +1,25 @@
+const AD_PLAYERS = ['.ytp-ad-player-overlay', '.ytp-ad-module'];
+const SKIP_BUTTONS = ['.ytp-ad-skip-button-modern', '.ytp-skip-ad-button'];
+
 //skips ad by "clicking" the skip button
 const clickSkipButton = (adElement) => {
-	const skipButton = adElement.querySelector('.ytp-ad-skip-button-modern');
-	if (skipButton) {
-		skipButton.click();
+	for (let i = 0; i < SKIP_BUTTONS.length; i++) {
+		const skipButton = adElement.querySelector(SKIP_BUTTONS[i]);
+		if (skipButton) {
+			skipButton.click();
+			return;
+		}
 	}
 };
 
 //detects if a video ad is present and tries to skip if button is available
 const getAd = () => {
-	const videoAdElement = document.querySelector('.ytp-ad-player-overlay');
-	if (videoAdElement) {
-		clickSkipButton(videoAdElement);
+	for (let i = 0; i < AD_PLAYERS.length; i++) {
+		const adPlayer = document.querySelector(AD_PLAYERS[i]);
+		if (adPlayer) {
+			clickSkipButton(adPlayer);
+			return;
+		}
 	}
 };
 
