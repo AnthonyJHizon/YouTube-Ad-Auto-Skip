@@ -1,4 +1,4 @@
-const AD_PLAYERS = ['.ytp-ad-player-overlay', '.ytp-ad-module'];
+const AD_PLAYERS = ['.ytp-ad-player-overlay', '.ytp-ad-module','.ytp-ad-player-overlay-layout__skip-or-preview-container', '.ytp-skip-ad'];
 const SKIP_BUTTONS = ['.ytp-ad-skip-button-modern', '.ytp-skip-ad-button'];
 
 //skips ad by "clicking" the skip button
